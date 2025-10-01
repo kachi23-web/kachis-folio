@@ -1,77 +1,144 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+// import React from "react";
+// import { Layout, Server, Database, MessageSquare } from "lucide-react";
+// import type { LucideIcon } from "lucide-react";
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Backend Technologies",
-      icon: "🚀",
-      skills: ["Node.js", "NestJS", "Laravel", "PHP", "RESTful APIs", "Microservices", "GraphQL"]
-    },
-    {
-      title: "Frontend Technologies", 
-      icon: "💻",
-      skills: ["React", "Vue.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"]
-    },
-    {
-      title: "Databases",
-      icon: "🗄️", 
-      skills: ["MongoDB", "MySQL", "PostgreSQL", "Redis", "Database Design", "Query Optimization"]
-    },
-    {
-      title: "DevOps & Cloud",
-      icon: "☁️",
-      skills: ["AWS", "Docker", "Git", "CI/CD", "Linux", "Server Management", "Cloud Architecture"]
-    },
-    {
-      title: "Messaging & Queue Systems",
-      icon: "📨",
-      skills: ["Apache Kafka", "RabbitMQ", "Redis Pub/Sub", "Message Queues", "Event-Driven Architecture"]
-    },
-    {
-      title: "Development Practices",
-      icon: "⚡",
-      skills: ["OOP/OOD", "SOLID Principles", "Design Patterns", "Test-Driven Development", "Agile", "Scrum"]
-    }
-  ];
+// type Category = {
+//   title: string;
+//   icon: LucideIcon;
+//   skills: string[];
+// };
 
+// const categories: Category[] = [
+//   {
+//     title: "Frontend Development",
+//     icon: Layout,
+//     skills: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+//   },
+//   {
+//     title: "Backend Development",
+//     icon: Server,
+//     skills: ["Node.js", "NestJS", "Express", "Laravel"],
+//   },
+//   {
+//     title: "Database",
+//     icon: Database,
+//     skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+//   },
+//   {
+//     title: "Messaging & Realtime",
+//     icon: MessageSquare,
+//     skills: ["Socket.io", "Kafka", "RabbitMQ", "Firebase"],
+//   },
+// ];
+
+// const Skills: React.FC = () => {
+//   return (
+//     <section className="py-16 bg-gray-900 text-white">
+//       <div className="container mx-auto px-6">
+//         <h2 className="text-4xl font-bold mb-12 text-center text-brand">
+//           My Skills
+//         </h2>
+
+//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+//           {categories.map(({ title, icon: Icon, skills }) => (
+//             <div
+//               key={title}
+//               className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-transform hover:scale-105 group 
+//                          hover:shadow-[0_0_20px_4px_rgba(40,200,255,0.4)]" // ✅ cyan glow on hover
+//             >
+//               {/* Icon with hover animation */}
+//               <Icon
+//                 size={36}
+//                 className="text-brand mb-4 transition-colors duration-300 group-hover:text-accent"
+//               />
+
+//               <h3 className="text-xl font-semibold mb-3">{title}</h3>
+//               <ul className="space-y-2 text-sm text-gray-300">
+//                 {skills.map((s) => (
+//                   <li key={s} className="flex items-center gap-2">
+//                     <span className="w-2 h-2 bg-brand rounded-full group-hover:bg-accent transition-colors duration-300"></span>
+//                     {s}
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Skills;
+
+
+
+
+
+import React from "react";
+import { Layout, Server, Database, MessageSquare } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+type Category = {
+  title: string;
+  icon: LucideIcon;
+  skills: string[];
+};
+
+const categories: Category[] = [
+  {
+    title: "Frontend Development",
+    icon: Layout,
+    skills: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+  },
+  {
+    title: "Backend Development",
+    icon: Server,
+    skills: ["Node.js", "NestJS", "Express", "Laravel"],
+  },
+  {
+    title: "Database",
+    icon: Database,
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+  },
+  {
+    title: "Messaging & Realtime",
+    icon: MessageSquare,
+    skills: ["Socket.io", "Kafka", "RabbitMQ", "Firebase"],
+  },
+];
+
+const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl font-bold mb-4">
-            Technical <span className="text-gradient">Skills</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit built through years of hands-on experience in full-stack development
-          </p>
-        </div>
+    <section className="py-16 bg-gray-900 text-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-12 text-center text-brand">
+          My Skills
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card 
-              key={category.title} 
-              className="p-6 bg-card border-card-border card-shadow hover:border-lemon/50 transition-all duration-300 fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {categories.map(({ title, icon: Icon, skills }) => (
+            <div
+              key={title}
+              className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-transform hover:scale-105 group 
+                         hover:shadow-[0_0_20px_4px_rgba(40,200,255,0.4)]" // ✅ cyan glow on hover
             >
-              <div className="mb-4">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">{category.icon}</span>
-                  <h3 className="text-xl font-semibold text-lemon">{category.title}</h3>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <Badge 
-                    key={skill}
-                    variant="secondary"
-                    className="bg-accent text-accent-foreground hover:bg-lemon hover:text-black transition-colors duration-200"
-                  >
-                    {skill}
-                  </Badge>
+              {/* Icon with hover animation */}
+              <Icon
+                size={36}
+                className="text-brand mb-4 transition-colors duration-300 group-hover:text-accent"
+              />
+
+              <h3 className="text-xl font-semibold mb-3">{title}</h3>
+              <ul className="space-y-2 text-sm text-gray-300">
+                {skills.map((s) => (
+                  <li key={s} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-brand rounded-full group-hover:bg-accent transition-colors duration-300"></span>
+                    {s}
+                  </li>
                 ))}
-              </div>
-            </Card>
+              </ul>
+            </div>
           ))}
         </div>
       </div>
