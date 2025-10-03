@@ -9,13 +9,13 @@ const Contact = () => {
     {
       icon: <Mail className="text-lemon" size={24} />,
       label: "Email",
-      value: "nwakobi.onyeka@email.com",
-      href: "mailto:nwakobi.onyeka@email.com"
+      value: "nwakobi.onyekanwaks@gmail.com",
+      href: "mailto:onyekanwaks@gmail.com"
     },
     {
       icon: <Phone className="text-lemon" size={24} />,
       label: "Phone", 
-      value: "+234 XXX XXX XXXX",
+      value: "+234 815 666 9858",
       href: "tel:+234XXXXXXXXX"
     },
     {

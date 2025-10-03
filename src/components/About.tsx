@@ -32,7 +32,7 @@ const About = () => {
 
             <div className="mt-8">
               <Button className="bg-lemon text-black hover:bg-lemon-dark font-semibold px-6 py-3">
-              <a href="resume.pdf" download="My_Resume.pdf">
+              <a href="/Nwakobi-Onyeka-Software-Engineer-Resume-full.pdf" download="/Nwakobi-Onyeka-Software-Engineer-Resume-full.pdf">
 
                 <Download className="mr-2" size={18} />
                 Download Resume </a>

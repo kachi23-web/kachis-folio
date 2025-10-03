@@ -6,7 +6,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <Mail size={20} />,
-      href: "mailto:nwakobi.onyeka@email.com",
+      href: "mailto:onyekanwaks@gmail.com",
       label: "Email"
     },
     {
@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Logo/Name */}
           <div className="mb-6">
             <h3 className="text-2xl font-bold text-lemon mb-2">Nwakobi Onyeka</h3>
-            <p className="text-muted-foreground"> Stack Software Engineer</p>
+            <p className="text-muted-foreground"> Software Engineer</p>
           </div>
 
           {/* Social Links */}
