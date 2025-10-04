@@ -9,14 +9,14 @@ const Contact = () => {
     {
       icon: <Mail className="text-lemon" size={24} />,
       label: "Email",
-      value: "nwakobi.onyekanwaks@gmail.com",
+      value: "onyekanwaks@gmail.com",
       href: "mailto:onyekanwaks@gmail.com"
     },
     {
       icon: <Phone className="text-lemon" size={24} />,
       label: "Phone", 
       value: "+234 815 666 9858",
-      href: "tel:+234XXXXXXXXX"
+      href: "tel:+2348156669858"
     },
     {
       icon: <Linkedin className="text-lemon" size={24} />,
@@ -27,8 +27,8 @@ const Contact = () => {
     {
       icon: <Github className="text-lemon" size={24} />,
       label: "GitHub",
-      value: "github.com/nwakobi-onyeka",
-      href: "https://github.com/nwakobi-onyeka"
+      value: "https://github.com/kachi23-web",
+      href: "https://github.com/kachi23-web"
     },
     {
       icon: <MapPin className="text-lemon" size={24} />,
