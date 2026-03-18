@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,24 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
 
 const Contact = () => {
+  const [submitted, setSubmitted] = React.useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+    const subject = (form.elements.namedItem('subject') as HTMLInputElement).value;
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const mailtoUrl = `mailto:onyekanwaks@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoUrl, '_self');
+    setSubmitted(true);
+    form.reset();
+    setTimeout(() => setSubmitted(false), 5000);
+  };
+
   const contactInfo = [
     {
       icon: <Mail className="text-lemon" size={24} />,
@@ -37,12 +56,6 @@ const Contact = () => {
       href: null
     }
   ];
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted');
-  };
 
   return (
     <section id="contact" className="py-20 bg-background">
@@ -141,6 +154,11 @@ const Contact = () => {
                     className="bg-input border-border focus:border-lemon resize-none"
                   />
                 </div>
+                {submitted && (
+                  <div className="text-lemon text-sm font-medium text-center py-2 bg-lemon/10 rounded-lg">
+                    Your email client should have opened. If not, email directly at onyekanwaks@gmail.com
+                  </div>
+                )}
                 <Button 
                   type="submit" 
                   className="w-full bg-lemon text-black hover:bg-lemon-dark font-semibold py-3"

@@ -4,6 +4,42 @@ import { Calendar, MapPin } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
+      title: "Software Engineer (Backend)",
+      company: "PayJiggy – Fintech Startup (Airtime, Data, and Bills Payment)",
+      period: "2025 – Present",
+      location: "Nigeria",
+      achievements: [
+        "Engineered secure and scalable backend services in Laravel to support airtime recharge, data subscriptions, and utility bill payments.",
+        "Designed and optimized APIs for high-volume transaction processing and third-party integrations with payment providers.",
+        "Implemented database schemas and caching strategies to improve transaction speed and system reliability.",
+        "Collaborated with cross-functional teams to ensure compliance, security, and smooth customer experience."
+      ]
+    },
+    {
+      title: "Fullstack Developer (ReactJS & NestJS)",
+      company: "Solution Funcity – Amusement Park & Events",
+      period: "2025 – Present",
+      location: "Nigeria",
+      achievements: [
+        "Developed and deployed ticketing and booking systems for rides, games, and events, enhancing customer engagement and sales.",
+        "Built dynamic, interactive web experiences using ReactJS for the frontend and NestJS for backend APIs.",
+        "Integrated secure payment gateways and real-time booking validation to streamline customer transactions.",
+        "Delivered responsive, user-friendly interfaces aligned with modern design and accessibility standards."
+      ]
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Probbity Technologies",
+      period: "2022 - Present",
+      location: "Nigeria",
+      achievements: [
+        "Built end-to-end web applications using React, Node.js, and cloud technologies.",
+        "Deployed applications on AWS with auto-scaling and load balancing.",
+        "Collaborated with cross-functional teams to deliver customer-focused solutions.",
+        "Developed and maintained WordPress sites, including custom themes, plugins, and performance optimizations."
+      ]
+    },
+    {
       title: "Backend Developer",
       company: "United State of Africa",
       period: "2023 - 2024",
@@ -23,17 +59,6 @@ const Experience = () => {
         "Developed RESTful APIs serving 100k+ daily requests with 99.9% uptime",
         "Implemented robust authentication and authorization systems",
         "Designed and optimized MongoDB schemas for complex data relationships"
-      ]
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Probbity Technologies", 
-      period: "2022 - Present",
-      location: "Nigeria",
-      achievements: [
-        "Built end-to-end web applications using React, Node.js, and cloud technologies",
-        "Deployed applications on AWS with auto-scaling and load balancing",
-        "Collaborated with cross-functional teams to deliver customer-focused solutions"
       ]
     },
     {

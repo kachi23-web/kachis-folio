@@ -27,6 +27,16 @@ const Skills = () => {
       icon: Database, 
       skills: ["MongoDB", "MySQL", "PostgreSQL", "Redis", "Database Design", "Query Optimization"]
     },
+    {
+      title: "CMS & WordPress",
+      icon: MessageSquare,
+      skills: ["WordPress", "Custom Themes", "Custom Plugins", "WooCommerce", "Elementor", "ACF", "Headless CMS"]
+    },
+    {
+      title: "Design Tools",
+      icon: Layout,
+      skills: ["Figma", "Adobe Photoshop", "UI/UX Design", "Wireframing", "Prototyping", "Responsive Design"]
+    },
     // {
     //   title: "DevOps & Cloud",
     //   icon: "☁️",

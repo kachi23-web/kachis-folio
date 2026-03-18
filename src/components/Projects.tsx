@@ -12,7 +12,8 @@ const Projects = () => {
       features: ["Payment Gateway Integration", "Real-time Inventory", "Analytics Dashboard", "Admin Panel"],
       type: "Full Stack Application",
       liveUrl: "https://adrxp.com",
-      githubUrl: "https://adrxp.com",
+      // githubUrl: "https://adrxp.com",
+      image: "src/assets/adrxp.png",
     },
     {
       title: "Fundraising Application",
@@ -20,39 +21,50 @@ const Projects = () => {
       techStack: ["NestJS", "Next.js", "Mongodb", "Payment APIs"],
       features: ["Campaign Management", "Secure Payments", "Social Integration", "Reporting Dashboard"],
       type: "Web Application",
-      liveUrl: "https://oncrowdr.com",
-      githubUrl: "https://oncrowdr.com",
+      liveUrl: "https://www.oncrowdr.com",
+      // githubUrl: "https://oncrowdr.com",
+      image: "src/assets/oncrowdr.png",
     },
     {
-      title: "Learning Management System",
-      description: "Comprehensive LMS with course creation, student progress tracking, and interactive content delivery. Features real-time communication and analytics.",
-      techStack: ["Laravel", "React", "MySQL"],
-      features: ["Course Creation", "Progress Tracking", "Live Classes", "Content Management"],
-      type: "Educational Platform",
-      liveUrl: "https://mychatapp.com",
-      githubUrl: "https://github.com/myname/chatapp",
+      title: "Solution Funcity",
+      description: "Ticketing and booking platform for an amusement park covering rides, games, and events. Built with ReactJS and NestJS with integrated payment processing.",
+      techStack: ["ReactJS", "NestJS", "Payment APIs"],
+      features: ["Ticketing System", "Ride & Event Booking", "Real-time Validation", "Secure Payments"],
+      type: "Full Stack Application",
+      liveUrl: "https://solutionfuncity.com",
+      githubUrl: "",
+      image: "src/assets/funcity.png",
     },
-    // {
-    //   title: "Job Recruitment Platform",
-    //   description: "AI-powered recruitment platform matching candidates with opportunities. Includes advanced filtering, automated screening, and interview scheduling.",
-    //   techStack: ["Node.js", "TypeScript", "MongoDB", "Kafka", "Machine Learning APIs"],
-    //   features: ["AI Matching", "Automated Screening", "Interview Scheduling", "Analytics"],
-    //   type: "Enterprise Application"
-    // },
-    // {
-    //   title: "Inventory Management System",
-    //   description: "Real-time inventory tracking system with predictive analytics, automated reordering, and comprehensive reporting for supply chain optimization.",
-    //   techStack: ["NestJS", "React", "PostgreSQL", "Redis", "Chart.js"],
-    //   features: ["Real-time Tracking", "Predictive Analytics", "Automated Alerts", "Supply Chain Optimization"],
-    //   type: "Business Application"
-    // },
-    // {
-    //   title: "Community Reporting Tool",
-    //   description: "Civic engagement platform for community issue reporting and tracking. Features geolocation, photo uploads, and government integration.",
-    //   techStack: ["Node.js", "React Native", "MongoDB", "AWS", "Google Maps API"],
-    //   features: ["Geolocation", "Photo Uploads", "Issue Tracking", "Government Integration"],
-    //   type: "Mobile Application"
-    // }
+    {
+      title: "Quikchow",
+      description: "Food delivery web app connecting customers with local restaurants. Features real-time order tracking, menu management, and seamless checkout experience.",
+      techStack: ["React", "Node.js", "MongoDB", "Payment APIs"],
+      features: ["Order Tracking", "Menu Management", "Restaurant Dashboard", "Delivery Scheduling"],
+      type: "Web Application",
+      liveUrl: "https://quickchow.afristuff.com",
+      githubUrl: "",
+      image: "src/assets/quikchow.png",
+    },
+    {
+      title: "Model of the Universe",
+      description: "Fashion and modelling competition platform showcasing talent, managing registrations, and hosting competition events with a sleek, modern design.",
+      techStack: ["React", "Node.js", "MySQL", "CSS3"],
+      features: ["Model Profiles", "Competition Registration", "Event Management", "Gallery Showcase"],
+      type: "Fashion & Modelling Platform",
+      liveUrl: "https://modeluniverse.org",
+      githubUrl: "",
+      image: "src/assets/modeluniverse.png",
+    },
+    {
+      title: "Sporting Business Website",
+      description: "Professional website for a badminton and tennis sports business. Features court booking, event listings, membership management, and a modern responsive design.",
+      techStack: ["React", "Node.js", "MySQL", "WordPress"],
+      features: ["Court Booking", "Event Listings", "Membership Management", "Responsive Design"],
+      type: "Business Website",
+      liveUrl: "https://dreamsport.vercel.app",
+      githubUrl: "",
+      image: "src/assets/dreamsport.png",
+    },
   ];
 
   return (
@@ -71,132 +83,84 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title}
-              className="p-6 bg-card border-card-border card-shadow hover:border-lemon/50 transition-all duration-300 fade-in group"
+              className="p-0 bg-card border-card-border card-shadow hover:border-lemon/50 transition-all duration-300 fade-in group overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4">
-                <div className="flex items-start justify-between mb-3">
-                  <Badge variant="outline" className="text-lemon border-lemon/50">
+              {/* Image placeholder */}
+              <div className="w-full h-44 bg-accent/30 flex items-center justify-center border-b border-card-border">
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="flex flex-col items-center gap-2 text-muted-foreground">
+                    <div className="w-12 h-12 rounded-full bg-lemon/10 flex items-center justify-center">
+                      <ExternalLink size={20} className="text-lemon/50" />
+                    </div>
+                    <span className="text-xs">Project Preview</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="p-6 flex flex-col gap-4">
+                <div>
+                  <Badge variant="outline" className="text-lemon border-lemon/50 mb-3">
                     {project.type}
                   </Badge>
+                  <h3 className="text-xl font-bold text-lemon mb-2 group-hover:text-lemon-muted transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {project.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-lemon mb-3 group-hover:text-lemon-muted transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
 
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-2">Key Features:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {project.features.map((feature) => (
+                      <Badge key={feature} variant="secondary" className="text-xs bg-accent/50 text-accent-foreground">
+                        {feature}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
 
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground mb-2">Tech Stack:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {project.techStack.map((tech) => (
+                      <Badge key={tech} className="text-xs bg-lemon/10 text-lemon border-lemon/20" variant="outline">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
 
-              <div className="mb-4">
-  <h4 className="text-sm font-semibold text-foreground mb-2">Key Features:</h4>
-  <div className="flex flex-wrap gap-1">
-    {project.features.map((feature) => (
-      <Badge 
-        key={feature}
-        variant="secondary"
-        className="text-xs bg-accent/50 text-accent-foreground"
-      >
-        {feature}
-      </Badge>
-    ))}
-  </div>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-semibold text-foreground mb-2">Tech Stack:</h4>
-  <div className="flex flex-wrap gap-1">
-    {project.techStack.map((tech) => (
-      <Badge 
-        key={tech}
-        className="text-xs bg-lemon/10 text-lemon border-lemon/20"
-        variant="outline"
-      >
-        {tech}
-      </Badge>
-    ))}
-  </div>
-</div>
-
-{/* Action buttons */}
-<div className="flex gap-3">
-  {project.liveUrl && (
-    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-      <Button 
-        size="sm" 
-        className="bg-lemon text-black hover:bg-lemon-dark w-full"
-      >
-        <ExternalLink size={16} className="mr-2" />
-        View Project
-      </Button>
-    </a>
-  )}
-  
-  {project.githubUrl && (
-    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-      <Button 
-        variant="outline" 
-        size="sm"
-        className="border-lemon/50 text-lemon hover:bg-lemon hover:text-black"
-      >
-        <Github size={16} />
-      </Button>
-    </a>
-  )}
-</div>
-
-
-
-
-              {/* <div className="mb-4">
-                <h4 className="text-sm font-semibold text-foreground mb-2">Key Features:</h4>
-                <div className="flex flex-wrap gap-1">
-                  {project.features.map((feature) => (
-                    <Badge 
-                      key={feature}
-                      variant="secondary"
-                      className="text-xs bg-accent/50 text-accent-foreground"
+                <div className="flex gap-3 mt-auto">
+                  <a
+                    href={project.liveUrl || "#"}
+                    target={project.liveUrl ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                    onClick={!project.liveUrl ? (e) => e.preventDefault() : undefined}
+                  >
+                    <Button
+                      size="sm"
+                      className="bg-lemon text-black hover:bg-lemon-dark w-full disabled:opacity-50"
+                      disabled={!project.liveUrl}
                     >
-                      {feature}
-                    </Badge>
-                  ))}
+                      <ExternalLink size={16} className="mr-2" />
+                      {project.liveUrl ? "View Project" : "Coming Soon"}
+                    </Button>
+                  </a>
+                  {project.githubUrl && (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="border-lemon/50 text-lemon hover:bg-lemon hover:text-black">
+                        <Github size={16} />
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </div>
-
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-foreground mb-2">Tech Stack:</h4>
-                <div className="flex flex-wrap gap-1">
-                  {project.techStack.map((tech) => (
-                    <Badge 
-                      key={tech}
-                      className="text-xs bg-lemon/10 text-lemon border-lemon/20"
-                      variant="outline"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </div> */}
-
-              {/* <div className="flex gap-3">
-                <Button 
-                size="sm" 
-                className="bg-lemon text-black hover:bg-lemon-dark flex-1"
-                >
-                <ExternalLink size={16} className="mr-2" />
-                  View Project
-                </Button>
-
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  className="border-lemon/50 text-lemon hover:bg-lemon hover:text-black"
-                >
-                  <Github size={16} />
-                </Button>
-              </div> */}
             </Card>
           ))}
         </div>

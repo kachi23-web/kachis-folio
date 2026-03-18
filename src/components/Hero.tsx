@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -57,15 +56,19 @@ const Hero = () => {
       </div> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-  <div className="flex flex-col md:flex-row items-center md:items-start gap-10 fade-in">
+  <div className="flex flex-col md:flex-row items-center gap-10 fade-in">
     
     {/* Profile Picture */}
-    <div className="flex-shrink-0">
-      <img 
-        src="/onyeka-headshot.png" 
-        alt="Nwakobi Onyeka" 
-        className="w-75 h-75 shadow-lg object-cover"
-        // className="w-48 h-48 rounded-full border-4 border-lemon shadow-lg object-cover"
+    <div className="flex-shrink-0 relative w-64 md:w-80">
+      {/* Decorative shapes behind image */}
+      <div className="absolute -top-4 -left-4 w-full h-full rounded-tl-[60px] rounded-br-[60px] border-2 border-lemon/40" />
+      <div className="absolute -bottom-4 -right-4 w-full h-full rounded-tl-[60px] rounded-br-[60px] bg-lemon/10" />
+      {/* Lemon glow blob */}
+      <div className="absolute inset-0 rounded-tl-[60px] rounded-br-[60px] bg-lemon/5 blur-xl scale-110" />
+      <img
+        src="/onyeka-headshot.png"
+        alt="Nwakobi Onyeka"
+        className="relative z-10 w-full h-auto object-cover rounded-tl-[60px] rounded-br-[60px] shadow-xl"
       />
     </div>
 
