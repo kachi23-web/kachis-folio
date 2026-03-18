@@ -6,7 +6,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
+    <section id="home" className="py-16 md:py-24 flex items-center justify-center hero-gradient relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-lemon/5 via-transparent to-transparent" />
       

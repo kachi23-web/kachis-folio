@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-featured e-commerce application with payment processing, inventory management, and real-time analytics. Built with microservices architecture for scalability.",
-      techStack: ["Nest.js", "React", "MongoDB", "AWS", "Stripe API"],
+      techStack: ["PHP", "Laravel", "MySQL", "React", "Stripe API"],
       features: ["Payment Gateway Integration", "Real-time Inventory", "Analytics Dashboard", "Admin Panel"],
       type: "Full Stack Application",
       liveUrl: "https://adrxp.com",
