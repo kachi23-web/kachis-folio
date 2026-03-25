@@ -2,6 +2,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from 'lucide-react';
+import adrxp from "@/assets/adrxp.png";
+import oncrowdr from "@/assets/oncrowdr.png";
+import funcity from "@/assets/funcity.png";
+import quikchow from "@/assets/quikchow.png";
+import modeluniverse from "@/assets/modeluniverse.png";
+import dreamsport from "@/assets/dreamsport.png";
 
 const Projects = () => {
   const projects = [
@@ -13,7 +19,7 @@ const Projects = () => {
       type: "Full Stack Application",
       liveUrl: "https://adrxp.com",
       // githubUrl: "https://adrxp.com",
-      image: "src/assets/adrxp.png",
+      image: adrxp,
     },
     {
       title: "Fundraising Application",
@@ -22,8 +28,7 @@ const Projects = () => {
       features: ["Campaign Management", "Secure Payments", "Social Integration", "Reporting Dashboard"],
       type: "Web Application",
       liveUrl: "https://www.oncrowdr.com",
-      // githubUrl: "https://oncrowdr.com",
-      image: "src/assets/oncrowdr.png",
+      image: oncrowdr,
     },
     {
       title: "Solution Funcity",
@@ -33,7 +38,7 @@ const Projects = () => {
       type: "Full Stack Application",
       liveUrl: "https://solutionfuncity.com",
       githubUrl: "",
-      image: "src/assets/funcity.png",
+      image: funcity,
     },
     {
       title: "Quikchow",
@@ -43,7 +48,7 @@ const Projects = () => {
       type: "Web Application",
       liveUrl: "https://quickchow.afristuff.com",
       githubUrl: "",
-      image: "src/assets/quikchow.png",
+      image: quikchow,
     },
     {
       title: "Model of the Universe",
@@ -53,7 +58,7 @@ const Projects = () => {
       type: "Fashion & Modelling Platform",
       liveUrl: "https://modeluniverse.org",
       githubUrl: "",
-      image: "src/assets/modeluniverse.png",
+      image: modeluniverse,
     },
     {
       title: "Sporting Business Website",
@@ -63,7 +68,7 @@ const Projects = () => {
       type: "Business Website",
       liveUrl: "https://dreamsport.vercel.app",
       githubUrl: "",
-      image: "src/assets/dreamsport.png",
+      image: dreamsport,
     },
   ];
 
