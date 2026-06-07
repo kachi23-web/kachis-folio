@@ -46,7 +46,7 @@ const Projects = () => {
       techStack: ["React", "Node.js", "MongoDB", "Payment APIs"],
       features: ["Order Tracking", "Menu Management", "Restaurant Dashboard", "Delivery Scheduling"],
       type: "Web Application",
-      liveUrl: "https://quickchow.afristuff.com",
+      liveUrl: "https://quikchowapp.com",
       githubUrl: "",
       image: quikchow,
     },
